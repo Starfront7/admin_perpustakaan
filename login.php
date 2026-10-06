@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card p-4 shadow">
-                    <h3 class="text-center mb-3">FORM LOGIN</h3>
+                    <h3 class="text-center mb-3">LOGIN PERPUSTAKAAN</h3>
 
                     <form method="POST" action="">
                         <div class="mb-3">
@@ -47,6 +47,11 @@ if (isset($_POST['login'])) {
 
                         <div class="">
                             <button type="submit" name="login" class="btn btn-primary px-3">LOGIN</button>
+                        </div>
+                        <br>
+                        <div class="">
+                            <a href="registrasi.php" type="button" name="registrasi"
+                                class="btn btn-danger px-3">Registrasi</a>
                         </div>
                     </form>
                 </div>

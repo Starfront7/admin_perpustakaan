@@ -23,7 +23,7 @@
 
     <header>
         <nav class="navbar navbar-expand-sm bg-primary header">
-            <a class="navbar-brand text-white" href="#"> PRESENTASI ONLINE </a>
+            <a class="navbar-brand text-white" href="#"> PERPUSTAKAAN ONLINE </a>
         </nav>
     </header>
 
@@ -82,7 +82,7 @@
                     </li>
                     <li>
                         <a href="logout.php"
-                            class="btn btn-dark btn-block text-left text-white d-flex align-items-center py-2 px-3">
+                            class="btn btn-dark text-left text-white d-flex align-items-center py-2 px-3">
                             <i class="fas fa-right-from-bracket icon mr-2" style="width: 20px; text-align: center"></i>
                             <span style="font-size: 13px">logout</span>
                         </a>
