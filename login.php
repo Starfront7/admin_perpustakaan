@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($koneksi, $query);
 
     if ($result) {
-        echo "<script>alert('Berhasil mendaftar!'); window.location='dashboard.php';</script>";
+        echo "<script>alert('Berhasil mendaftar!'); window.location='login.php';</script>";
     } else {
         echo "<script>alert('Gagal mendaftar: " . mysqli_error($koneksi) . "');</script>";
     }
@@ -47,9 +47,9 @@ if (isset($_POST['login'])) {
 
                         <div class="">
                             <button type="submit" name="login" class="btn btn-primary px-3">LOGIN</button>
-                        </div>
-                        <br>
-                        <div class="">
+
+
+
                             <a href="registrasi.php" type="button" name="registrasi"
                                 class="btn btn-danger px-3">Registrasi</a>
                         </div>

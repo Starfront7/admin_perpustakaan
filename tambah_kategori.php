@@ -5,14 +5,12 @@ include 'koneksi.php';
 if (isset($_POST['submit'])) {
     $kategori = $_POST['kategori'];
 
-    $query = "INSERT INTO kategori (kategori) VALUES ('$kategori')";
+    $insert = "INSERT INTO kategori (kategori) VALUES ('$kategori')";
 
-    $result = mysqli_query($koneksi, $query);
-
-    if ($result) {
-        echo "<script>alert('Berhasil menambahkan kategori!'); window.location='kategori.php';</script>";
+    if ($insert) {
+        echo "<script>alert('Berhasil registrasi!'); window.location='kategori.php';</script>";
     } else {
-        echo "<script>alert('Gagal menambahkan kategori: " . mysqli_error($koneksi) . "');</script>";
+        echo "<script>alert('Gagal mendaftar!');</script>";
     }
 }
 ?>

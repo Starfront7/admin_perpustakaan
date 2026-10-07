@@ -49,7 +49,7 @@ include 'koneksi.php';
                                 <a href="hapus_kategori.php?id=<?php echo $row['id_kategori']; ?>"
                                     class="btn btn-danger btn-sm"
                                     onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
-                            </td>
+                                </td>
                         </tr>
                         <?php } ?>
                     </tbody>

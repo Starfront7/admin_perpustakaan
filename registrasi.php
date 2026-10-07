@@ -5,19 +5,16 @@ include 'koneksi.php';
 if (isset($_POST['login'])) {
     $nama     = $_POST['nama'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email    = $_POST['email'];
+    $password = md5($_POST['password']);
     $alamat   = $_POST['alamat'];
     $no_tlp   = $_POST['no_tlp'];
     $level    = $_POST['level'];
 
-    $query = "INSERT INTO user (nama, username, password, email, alamat, no_tlp, level) 
+    $insert = "INSERT INTO user (nama, username, password, email, alamat, no_tlp, level) 
             VALUES ('$nama', '$username', '$password', '$email', '$alamat', '$no_tlp', '$level')";
-    
-    $result = mysqli_query($koneksi, $query);
 
-    if ($result) {
-        echo "<script>alert('Berhasil mendaftar!'); window.location='dashboard.php';</script>";
+    if ($insert) {
+        echo "<script>alert('Berhasil registrasi!'); window.location='login.php';</script>";
     } else {
         echo "<script>alert('Gagal mendaftar!');</script>";
     }
@@ -32,7 +29,7 @@ if (isset($_POST['login'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-info d-flex align-items-center justify-content-center min-vh-200">
+<body class="bg-info d-flex align-items-center justify-content-center min-vh-100">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -73,7 +70,7 @@ if (isset($_POST['login'])) {
                         <div class="mb-3">
                             <label class="form-label">level:</label>
 
-                            <select name="level" class="form-control" id="">
+                            <select name="level" required class="form-control" id="">
                                 <option value="">--pilih--</option>
                                 <option value="admin">PEMINJAMAN</option>
                                 <option value="user">USER</option>
