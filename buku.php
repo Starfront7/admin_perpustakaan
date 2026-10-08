@@ -1,5 +1,5 @@
 <?php 
-include 'header.php';
+include 'header_menu.php';
 include 'koneksi.php';
 ?>
 
@@ -20,7 +20,7 @@ include 'koneksi.php';
                 <div class="col-12 col-md-6">
                     <h3 class="fw-bold mb-0 text-secondary">Data Buku</h3>
                 </div>
-                <div class="col-12 col-md-6 text-end">
+                <div class="col-12 col-md-6 text-right">
                     <a href="tambah_buku.php" class="btn btn-primary">Tambah Buku</a>
                 </div>
             </div>

@@ -12,3 +12,4 @@ if ($hapus) {
     echo "<script>alert('Gagal menghapus data!'); window.location='buku.php';</script>";
 }
 ?>
+```

@@ -2,14 +2,11 @@
 session_start();
 include 'koneksi.php';
 
-// Ambil ID dari URL
 $id = $_GET['id'];
 
-// Ambil data peminjaman berdasarkan ID
 $data = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE id_peminjaman='$id'");
 $row = mysqli_fetch_assoc($data);
 
-// Proses saat tombol update diklik
 if (isset($_POST['submit'])) {
     $id_user              = $_POST['id_user'];
     $id_buku              = $_POST['id_buku'];

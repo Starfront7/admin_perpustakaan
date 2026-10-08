@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include 'header_menu.php';
 include 'koneksi.php';
 
 if (isset($_POST['submit'])) {
@@ -15,43 +17,23 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
+<div class="container py-5 mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h3 class="text-center mb-3">FORM KATEGORI</h3>
 
-<head>
-    <title>Kategori</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+                <form method="POST" action="">
+                    <div class="mb-3">
+                        <label class="form-label">Kategori:</label>
+                        <input type="text" name="kategori" class="form-control" required>
+                    </div>
 
-    <style>
-    body {
-        background-color: #ffdcb7;
-    }
-    </style>
-</head>
-
-<body class="d-flex align-items-center justify-content-center min-vh-100">
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card p-4 shadow">
-                    <h3 class="text-center mb-3">FORM KATEGORI</h3>
-
-                    <form method="POST" action="">
-                        <div class="mb-3">
-                            <label class="form-label">Kategori:</label>
-                            <input type="text" name="kategori" class="form-control" required>
-                        </div>
-
-                        <div class="">
-                            <button type="submit" name="submit" class="btn btn-primary px-3">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="">
+                        <button type="submit" name="submit" class="btn btn-primary px-3">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>

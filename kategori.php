@@ -1,14 +1,15 @@
 <?php 
-include 'header.php';
+include 'header_menu.php';
 
 include 'koneksi.php';
 ?>
 
 <style>
 .main-container {
-    max-width: 1500px;
+    max-width: 2500px;
     margin: 20px auto;
     margin-top: 40px;
+    width: 250%;
     margin-left: 75px;
 }
 </style>
@@ -18,16 +19,16 @@ include 'koneksi.php';
 
         <div class="main-container">
             <div class="row mb-3 align-items-center">
-                <div class="col-12 col-md-4 mb-2 mb-md-0">
-                    <h3 class="fw-bold mb-0 text-secondar ">Kategori</h3>
-                </div>
-                <div class="col-12 col-md-8 text-end">
+
+                <h3 class="fw-bold mb-0 text-secondary">TABLE_Kategori</h3><br>
+                <br>
+                <div class="col-12 col-md-8 text-right align-items-right">
                     <a href="tambah_kategori.php" class="btn btn-primary">Tambah</a>
                 </div>
             </div>
 
             <div class="table-responsive shadow-sm rounded bg-white p-3">
-                <table class="table table-bordered table-hover align-middle text-center mb-0">
+                <table class="table table-bordered align-middle text-center mb-0">
                     <thead class="table-dark">
                         <tr>
                             <th>Id Kategori</th>
@@ -49,7 +50,7 @@ include 'koneksi.php';
                                 <a href="hapus_kategori.php?id=<?php echo $row['id_kategori']; ?>"
                                     class="btn btn-danger btn-sm"
                                     onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
-                                </td>
+                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>

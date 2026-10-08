@@ -7,6 +7,7 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     $alamat   = $_POST['alamat'];
+    $email = $_POST['email'];
     $no_tlp   = $_POST['no_tlp'];
     $level    = $_POST['level'];
 
@@ -35,7 +36,7 @@ if (isset($_POST['login'])) {
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card p-4 shadow">
-                    <h3 class="text-center mb-3">LOGIN PERPUSTAKAAN</h3>
+                    <h3 class="text-center mb-3">REGISTRASI PERPUSTAKAAN</h3>
 
                     <form method="POST" action="">
 
@@ -81,6 +82,7 @@ if (isset($_POST['login'])) {
 
                         <div class="">
                             <button type="submit" name="login" class="btn btn-primary px-3">LOGIN</button>
+                            <a href="login.php" class="btn btn-warning px-3">BALIK</a>
                         </div>
                     </form>
                 </div>

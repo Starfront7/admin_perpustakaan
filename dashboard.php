@@ -1,20 +1,12 @@
 <?php 
-include 'header.php';
+include 'header_menu.php';
+include 'koneksi.php';
 
-// Koneksi ke database (opsional jika nanti ingin menampilkan angka dari database)
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "perpustakaan";
-$koneksi = mysqli_connect($host, $user, $pass, $db);
 
-// Contoh jika ingin mengambil total data asli dari database secara dinamis:
-// $jml_peminjam = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM peminjam"));
-// $jml_kategori = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kategori"));
-// $jml_buku     = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM buku"));
+$jml_kategori = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kategori"));
+$jml_buku = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM buku"));
 ?>
 
-<!-- Tambahan CSS agar kotak dipastikan berjajar ke samping (horizontal) -->
 <style>
 .dashboard {
     display: flex !important;
@@ -29,8 +21,6 @@ $koneksi = mysqli_connect($host, $user, $pass, $db);
 }
 </style>
 
-
-<!-- Content di Samping Kanan -->
 <main class="col-md-12 ml-sm-8 col-lg-10 content">
     <div class="dashboard">
 
@@ -41,15 +31,13 @@ $koneksi = mysqli_connect($host, $user, $pass, $db);
         </div>
 
         <div class="box green bg-success">
-            <h1>8</h1>
-            <p>Kategori buku</p>
-            <i class="fas fa-book-bookmark icon"></i>
+            <h1><?php echo $jml_kategori; ?></h1>
+            <p>Kategori buku</p> <i class="fas fa-book-layers icon"></i>
         </div>
 
         <div class="box purple bg-info">
-            <h1>98</h1>
-            <p>Stock-Buku</p>
-            <i class="fas fa-book-bookmark icon"></i>
+            <h1><?php echo $jml_buku; ?></h1>
+            <p>Jumlah buku</p> <i class="fas fa-book-book icon"></i>
         </div>
 
         <div class="box red bg-warning">
