@@ -5,6 +5,8 @@ include 'koneksi.php';
 
 $jml_kategori = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kategori"));
 $jml_buku = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM buku"));
+$jml_pinjam = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM peminjaman"));
+$jml_ulasan = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ulasan"));
 ?>
 
 <style>
@@ -25,25 +27,25 @@ $jml_buku = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM buku"));
     <div class="dashboard">
 
         <div class="box orange bg-primary">
-            <h1>200</h1>
+            <h1><?php echo $jml_pinjam; ?></h1>
             <p>Jumlah peminjam</p>
             <i class="fas fa-users icon"></i>
         </div>
 
         <div class="box green bg-success">
             <h1><?php echo $jml_kategori; ?></h1>
-            <p>Kategori buku</p> <i class="fas fa-book-layers icon"></i>
+            <p>Kategori buku</p> <i class="fas fa-layer-group icon"></i>
         </div>
 
         <div class="box purple bg-info">
             <h1><?php echo $jml_buku; ?></h1>
-            <p>Jumlah buku</p> <i class="fas fa-book-book icon"></i>
+            <p>Jumlah buku</p> <i class="fas fa-book icon"></i>
         </div>
 
         <div class="box red bg-warning">
-            <h1>130</h1>
-            <p>Yang sudah di kembalikan</p>
-            <i class="fas fa-book-medical icon"></i>
+            <h1><?php echo $jml_ulasan; ?></h1>
+            <p>Yang sudah di Review</p>
+            <i class="fas fa-star icon"></i>
         </div>
 
     </div>

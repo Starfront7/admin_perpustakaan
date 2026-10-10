@@ -19,18 +19,7 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Edit Kategori</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    body {
-        background-color: #ffdcb7;
-    }
-    </style>
-</head>
-
-<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <?php include 'header_menu.php'; ?>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -54,7 +43,3 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </div>
-
-</body>
-
-</html>

@@ -1,21 +1,21 @@
 <?php
 session_start();
-
-include 'header_menu.php';
 include 'koneksi.php';
 
 if (isset($_POST['submit'])) {
     $kategori = $_POST['kategori'];
 
-    $insert = "INSERT INTO kategori (kategori) VALUES ('$kategori')";
+    $insert = mysqli_query($koneksi, "INSERT INTO kategori (kategori) VALUES ('$kategori')");
 
     if ($insert) {
-        echo "<script>alert('Berhasil registrasi!'); window.location='kategori.php';</script>";
+        echo "<script>alert('Berhasil menambah kategori!'); window.location='kategori.php';</script>";
     } else {
-        echo "<script>alert('Gagal mendaftar!');</script>";
+        echo "<script>alert('Gagal menambah kategori!');</script>";
     }
 }
 ?>
+
+<?php include 'header_menu.php'; ?>
 
 <div class="container py-5 mt-3">
     <div class="row justify-content-center">
@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="">
                         <button type="submit" name="submit" class="btn btn-primary px-3">Submit</button>
+                        <a href="kategori.php" class="btn btn-secondary px-3">kembali</a>
                     </div>
                 </form>
             </div>

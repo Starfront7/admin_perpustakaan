@@ -20,8 +20,8 @@ include 'koneksi.php';
                 <div class="col-12 col-md-4 mb-2 mb-md-0">
                     <h3 class="fw-bold mb-0 text-secondary">Data Peminjaman</h3>
                 </div>
-                <div class="col-12 col-md-8 text-end">
-                    <a href="tambah_peminjaman.php" class="btn btn-primary">Tambah</a>
+                <div class="col-12 col-md-8 text-right">
+                    <a href="tambah_peminjaman.php" class="btn btn-primary">Tambah Peminjam</a>
                 </div>
             </div>
 

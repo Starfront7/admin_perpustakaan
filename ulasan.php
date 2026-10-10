@@ -5,7 +5,7 @@ include 'koneksi.php';
 
 <style>
 .main-container {
-    max-width: 1500px;
+    width: 1000px;
     margin: 20px auto;
     margin-top: 40px;
     margin-left: 75px;
@@ -21,7 +21,7 @@ include 'koneksi.php';
                     <h3 class="fw-bold mb-0 text-secondary">Data Ulasan</h3>
                 </div>
                 <div class="col-12 col-md-8 text-right">
-                    <a href="tambah_ulasan.php" class="btn btn-primary">Tambah</a>
+                    <a href="tambah_ulasan.php" class="btn btn-primary">Tambah Ulasan</a>
                 </div>
             </div>
 
